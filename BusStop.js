@@ -8,13 +8,18 @@ class BusStop {
      * @return {string} a representation of next {arrivalsLimit} arrivals
      */
     toString() {
-        const arrivalsRegex = /([0-9]+-[0-9]+-[0-9]+)T([0-9]+:[0-9]+:[0-9]+)Z/;
+
         const arrivalsLimit = 5;
 
-        let nextArrivalsTime = this.arrivals.slice(0, arrivalsLimit)
-                                            .map(arrivals =>
-                                                arrivals.expectedArrival.match(arrivalsRegex)[2]).join('\n');
-        return `The next five arrivals at stop ${this.id} are:\n${nextArrivalsTime}`;
+        const arrivalsRegex = /([0-9]+-[0-9]+-[0-9]+)T([0-9]+:[0-9]+:[0-9]+)Z/;
+
+        this.arrivals.sort((a, b) => parseInt(a.timeToStation) - parseInt(b.timeToStation));
+
+        let prettyArrivalsOutput = '';
+        this.arrivals.slice(0, arrivalsLimit).forEach( arrival =>
+            prettyArrivalsOutput += `In ${Math.round(arrival.timeToStation/60.0)} mins, towards ${arrival.towards}, destination: ${arrival.destinationName}\n` );
+
+        return `The next five arrivals at stop ${this.id} are:\n${prettyArrivalsOutput}`;
     }
 }
 
