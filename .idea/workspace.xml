@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61139572-9375-4184-b679-7bf0e069ef2b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BusStop.js" beforeDir="false" afterPath="$PROJECT_DIR$/BusStop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BusStopController.js" beforeDir="false" afterPath="$PROJECT_DIR$/BusStopController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PostCodeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/PostCodeController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,34 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="221">
+              <caret line="13" column="110" selection-start-line="13" selection-start-column="110" selection-end-line="13" selection-end-column="110" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostCodeController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PostCodeController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="async_hooks.js" pinned="false" current-in-tab="false">
-        <entry file="mock://internal/async_hooks.js">
-          <provider selected="true" editor-type-id="vmFileEditor" />
         </entry>
       </file>
       <file leaf-file-name="BusStopController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BusStopController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="72" column="30" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="30" />
+            <state relative-caret-position="358">
+              <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -55,8 +37,8 @@
       <file leaf-file-name="BusStop.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BusStop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="221">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -70,6 +52,8 @@
       <find>console</find>
       <find>map</find>
       <find>conso</find>
+      <find>getSomeArrivals</find>
+      <find>getBusStop</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,10 +64,10 @@
       <list>
         <option value="$PROJECT_DIR$/busStop.js" />
         <option value="$PROJECT_DIR$/PostCode.js" />
-        <option value="$PROJECT_DIR$/BusStop.js" />
-        <option value="$PROJECT_DIR$/BusStopController.js" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/PostCodeController.js" />
+        <option value="$PROJECT_DIR$/BusStopController.js" />
+        <option value="$PROJECT_DIR$/BusStop.js" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
@@ -105,10 +89,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="80" />
+    <option name="x" value="-6" />
     <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="height" value="866" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,12 +211,12 @@
       <workItem from="1529403255097" duration="64000" />
       <workItem from="1529403345751" duration="845000" />
       <workItem from="1529404217233" duration="17498000" />
-      <workItem from="1529485031666" duration="8693000" />
+      <workItem from="1529485031666" duration="11382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27839000" />
+    <option name="totallyTimeSpent" value="30528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -277,7 +260,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -364,20 +347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BusStop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BusStopController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="72" column="30" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.11.3/core-modules/readline.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -385,17 +354,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PostCodeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BusStopController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BusStop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="110" selection-start-line="13" selection-start-column="110" selection-end-line="13" selection-end-column="110" />
         </state>
       </provider>
     </entry>

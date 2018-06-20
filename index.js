@@ -1,22 +1,18 @@
-const BusStopController = require('./BusStopController.js')
-const PostCodeController = require('./PostCodeController.js')
-const readLine = require('readline');
+const express = require('express');
+const BusStopController = require('./BusStopController.js');
+const PostCodeController = require('./PostCodeController.js');
 
-const rl = readLine.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+const app = express();
+const postCodeController = new PostCodeController();
+const busStopController = new BusStopController();
 
-rl.question('Please enter the post code: ', postCodeStr => {
+const arrivalsNoLimit = 5;
+const busStopNoLimit = 2;
 
-    const postCodeController = new PostCodeController();
-    const busStopController = new BusStopController();
+app.get('/departureBoards/:postcode', (req, res, next) =>
+    postCodeController.getPostCode(req.params.postcode)
+        .then(postCode => busStopController.getSomeBusStopsObjNearTo(postCode, busStopNoLimit, arrivalsNoLimit))
+        .then(data => res.send(data))
+        .catch(error => next(error)));
 
-    postCodeController.getPostCode(postCodeStr)
-        .then(postCode => busStopController.getSomeBusStopsObjNearTo(postCode, 2)
-            .then(data => Promise.all(data).then(data=>console.log(data.toString())))
-            .catch(error => console.log(error)))
-        .catch(error => console.log(error));
-
-    rl.close();
-});
+app.listen(3000, () => console.log('App listening on port 3000!'))

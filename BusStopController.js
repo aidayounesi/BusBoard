@@ -7,11 +7,23 @@ class BusStopController {
 
     /**
      * @param stopId
+     * @param howMany
      * @return Promise<BusStop>
      */
-    getBusStop(stopId) {
-        return this.getArrivals(stopId)
+    getBusStop(stopId, howMany) {
+        return this.getSomeArrivals(stopId, howMany)
             .then(arrivals => new BusStop(stopId, arrivals));
+    }
+
+    /**
+     * @param stopId
+     * @return Promise<Array<arrival> sliced by howmany>
+     */
+    getSomeArrivals(stopId, howMany) {
+        return this.getArrivals(stopId)
+            .then(arrival =>
+                arrival.sort((a, b) =>
+                    parseInt(a.timeToStation) - parseInt(b.timeToStation)).slice(0, howMany));
     }
 
     /**
@@ -38,16 +50,14 @@ class BusStopController {
     /**
      *
      * @param postCodeObj
-     * @param howMany
-     * @return  Array<Promise<BusStop> with the length of howMany>
+     * @param howManyStops
+     * @param howManyArrivals
+     * @return  Promise<Array<BusStop>> with the length of howMany>
      */
-    getSomeBusStopsObjNearTo(postCodeObj, howMany) {
-        return this.getSomeBusStopsInfoNearTo(postCodeObj, howMany)
+    getSomeBusStopsObjNearTo(postCodeObj, howManyStops, howManyArrivals) {
+        return this.getSomeBusStopsInfoNearTo(postCodeObj, howManyStops)
                         .then(manyStopsInfo =>
-                            manyStopsInfo.map(stopInfo =>
-                                this.getBusStop(stopInfo.id)
-                            )
-                        );
+                            Promise.all(manyStopsInfo.map(stopInfo => this.getBusStop(stopInfo.id, howManyArrivals))));
     }
 
     /**
