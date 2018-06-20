@@ -10,19 +10,13 @@ const rl = readLine.createInterface({
 rl.question('Please enter the post code: ', postCodeStr => {
 
     const postCodeController = new PostCodeController();
+    const busStopController = new BusStopController();
 
-    // let postCodeStr = 'OX49 5NU';
     postCodeController.getPostCode(postCodeStr)
-        .then(postCode => console.log(postCode))
+        .then(postCode => busStopController.getSomeBusStopsObjNearTo(postCode, 2)
+            .then(data => Promise.all(data).then(data=>console.log(data.toString())))
+            .catch(error => console.log(error)))
         .catch(error => console.log(error));
-
-
-    // const busStopController = new BusStopController();
-    //
-    // // let stopId = '490008660N';
-    // busStopController.getBusStop(stopId)
-    //     .then(busStop => console.log(busStop.toString()))
-    //     .catch(error => console.log(error));
 
     rl.close();
 });

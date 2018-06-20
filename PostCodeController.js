@@ -30,7 +30,7 @@ class PostCodeController {
             }, function (error, response, body) {
                     if (error != null)
                         reject(error);
-                    else if (response.statusCode === 404)
+                    else if (response.statusCode === 404 || body.status === 404 || body.result[0].result === null)
                         reject('Invalid post code!');
                     else
                         resolve(body);
