@@ -16,6 +16,6 @@ app.get('/departureBoards', (req, res, next) =>
     postCodeController.getPostCode(req.query.postcode)
         .then(postCode => busStopController.getSomeBusStopsObjNearTo(postCode, busStopNoLimit, arrivalsNoLimit))
         .then(data => {res.type('json');res.send(data);})
-        .catch(error => next(error)));
+        .catch(error => res.status(500).send(error)));
 
 app.listen(3000, () => console.log('App listening on port 3000!'))

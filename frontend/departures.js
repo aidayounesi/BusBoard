@@ -8,21 +8,34 @@ function setBusStopsArrivals() {
     xhttp.open('GET', `${domain}/departureBoards?postcode=${postCode}`, true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.onload = function() {
-        displayBusStopsArrivals(document.getElementById('results'),
+
+        var result = document.getElementById('results');
+        removeAllChildren(result);
+
+        console.log(this.responseText);
+
+        if (xhttp.status === 200)
+            displayBusStopsArrivals(result,
                                 JSON.parse(this.responseText));
+        else
+            displayError(result, this.responseText);
     };
     xhttp.send();
 }
+
+function removeAllChildren(htmlElement) {
+    // remove all children
+    while (htmlElement.firstChild) {
+        htmlElement.removeChild(htmlElement.firstChild);
+    }
+}
+
 
 /**
  * @param htmlElement the html element that bus stops should be added to
  * @param stopsJson JSON array of bus stops contatinig id and arrivals
  */
 function displayBusStopsArrivals(htmlElement, stopsJson) {
-    // remove all children
-    while (htmlElement.firstChild) {
-        htmlElement.removeChild(htmlElement.firstChild);
-    }
 
     var title = document.createElement('h2');
     title.innerText = 'Results';
@@ -99,5 +112,14 @@ function displayOnePost(htmlElement, postDataJson) {
         newChild.src = postDataJson.image;
         htmlElement.appendChild(newChild);
     }
+}
 
+/**
+ * @param htmlElement the html element that the error should be displayed in
+ * @param error
+ */
+function displayError(htmlElement, error) {
+    var newChild = document.createElement('h1');
+    newChild.innerText = 'Ooops! ' + error;
+    htmlElement.appendChild(newChild);
 }
