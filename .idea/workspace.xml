@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61139572-9375-4184-b679-7bf0e069ef2b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/departures.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/departures.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +44,8 @@
       <file leaf-file-name="departures.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/departures.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="53" column="164" selection-start-line="53" selection-start-column="164" selection-end-line="53" selection-end-column="164" />
+            <state relative-caret-position="494">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
@@ -249,12 +245,12 @@
       <workItem from="1529404217233" duration="17498000" />
       <workItem from="1529485031666" duration="11908000" />
       <workItem from="1529501677994" duration="8325000" />
-      <workItem from="1529571620749" duration="8145000" />
+      <workItem from="1529571620749" duration="8738000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47524000" />
+    <option name="totallyTimeSpent" value="48117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -529,8 +525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/departures.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="53" column="164" selection-start-line="53" selection-start-column="164" selection-end-line="53" selection-end-column="164" />
+        <state relative-caret-position="494">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>

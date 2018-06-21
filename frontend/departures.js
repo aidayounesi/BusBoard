@@ -82,24 +82,20 @@ function displayPosts(htmlElement, postsDataJson) {
  * @param postDataJson JSON object of a post
  */
 function displayOnePost(htmlElement, postDataJson) {
+    var newChild = document.createElement('h2');
+    newChild.innerText = postDataJson.title;
+    htmlElement.appendChild(newChild);
 
-    // a dictionary that matches the values and type of a post element
-    // should be in oder of expected html items
-    var postElementsDataStyle = {
-        'h2':postDataJson.title ,
-        'h5':postDataJson.date,
-        'p':postDataJson.description };
+    newChild = document.createElement('h5');
+    newChild.innerText = postDataJson.date;
+    htmlElement.appendChild(newChild);
 
-    for (var key in postElementsDataStyle) {
-        // check if the property/key is defined in the object itself, not in parent
-        if (postElementsDataStyle.hasOwnProperty(key)) {
-            var newChild = document.createElement(key);
-            newChild.innerText = postElementsDataStyle[key];
-            htmlElement.appendChild(newChild);
-        }
-    }
+    newChild = document.createElement('p');
+    newChild.innerText = postDataJson.description;
+    htmlElement.appendChild(newChild);
+
     if (postDataJson.image != null) {
-        var newChild = document.createElement('img');
+        newChild = document.createElement('img');
         newChild.src = postDataJson.image;
         htmlElement.appendChild(newChild);
     }
