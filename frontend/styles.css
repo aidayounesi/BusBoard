@@ -1,0 +1,225 @@
+
+@import url("https://fonts.googleapis.com/css?family=Scope+One|Trocchi");
+* {
+    box-sizing: border-box;
+}
+body, html {
+    font-family: Scope One;
+    height:100%;
+    padding:0px;
+    margin:0px;
+}
+
+input[type=text]{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type=submit] {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(100, 30, 30);
+}
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+table, td, th {
+    width: 100%;
+}
+thead {
+    font-weight: bold;
+}
+
+.header {
+    padding: 30px;
+    font-size: 80px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.headersmall {
+    width:100%;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+/* Center the loader */
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid darkred;
+    border-radius: 50%;
+    border-top: 16px solid white;
+    border-bottom: 16px solid white;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.overlaybutton {
+    font-size:60px;
+    cursor:pointer;
+    position: fixed;
+    color:white;
+    padding:20px;
+}
+
+.bg {
+    background-image: url("background.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 41%;
+    margin-left: 6%;
+    margin-top: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 41%;
+    margin-left: 6%;
+    margin-top: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}

@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" content="width=device-width, initial-scale=1">
     <title>Departure boards</title>
     <link rel="stylesheet" href="styles.css">
     <script src="departures.js"></script>
   </head>
+
   <body>
-    <button id="blog_button" onclick="navigateToHistory();">History blog</button>
-    <h1>BusBoard</h1>
-    <form onsubmit="event.preventDefault(); setBusStopsArrivals();" name="postCodeForm">
-        Postcode:<br>
-        <input type="text" name="postcode" required>
-        <input type="submit" value="Submit">
-    </form>
-    <div id="results">
+    <div class="bg">
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+            <a href="http://localhost:3000/history">Blog</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+        </div>
+
+        <span class="overlaybutton" onclick="openNav()">&#9776;</span>
+
+        <h1 class="header">BusBoard</h1>
+
+        <form onsubmit="event.preventDefault(); setBusStopsArrivals();" name="postCodeForm">
+            <input type="text" id="postcode" name="postcode" placeholder="Enter a Post Code" required>
+            <input type="submit" value="Search">
+        </form>
+
+        <div id="loader" class="loader" style="display:none;"></div>
+        <div id="results" class="animate-bottom">
+        </div>
     </div>
+
   </body>
+
 </html>
