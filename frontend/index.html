@@ -7,24 +7,14 @@
     <script src="departures.js"></script>
   </head>
   <body>
+    <button id="blog_button" onclick="navigateToHistory();">History blog</button>
     <h1>BusBoard</h1>
-    <form onsubmit="event.preventDefault(); getBusStopsArrivals();" name="postCodeForm">
+    <form onsubmit="event.preventDefault(); setBusStopsArrivals();" name="postCodeForm">
         Postcode:<br>
         <input type="text" name="postcode" required>
         <input type="submit" value="Submit">
     </form>
     <div id="results">
-        <h2>Results</h2>
-        <h3>Example stop 1</h3>
-        <ul>
-            <li>2 minutes: 123 to Example Street</li>
-            <li>3 minutes: 456 to Fantasy Land</li>
-        </ul>
-        <h3>Example stop 2</h3>
-        <ul>
-            <li>1 minute: 123 to Example Street</li>
-            <li>4 minutes: 456 to Fantasy Land</li>
-        </ul>
     </div>
   </body>
 </html>

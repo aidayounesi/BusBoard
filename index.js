@@ -10,6 +10,8 @@ const arrivalsNoLimit = 5;
 const busStopNoLimit = 2;
 
 app.use(express.static('frontend'));
+app.use('/history', express.static('frontend/history.html'));
+
 app.get('/departureBoards', (req, res, next) =>
     postCodeController.getPostCode(req.query.postcode)
         .then(postCode => busStopController.getSomeBusStopsObjNearTo(postCode, busStopNoLimit, arrivalsNoLimit))
