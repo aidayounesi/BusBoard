@@ -9,10 +9,11 @@ const busStopController = new BusStopController();
 const arrivalsNoLimit = 5;
 const busStopNoLimit = 2;
 
-app.get('/departureBoards/:postcode', (req, res, next) =>
-    postCodeController.getPostCode(req.params.postcode)
+app.use(express.static('frontend'));
+app.get('/departureBoards', (req, res, next) =>
+    postCodeController.getPostCode(req.query.postcode)
         .then(postCode => busStopController.getSomeBusStopsObjNearTo(postCode, busStopNoLimit, arrivalsNoLimit))
-        .then(data => res.send(data))
+        .then(data => {res.type('json');res.send(data);})
         .catch(error => next(error)));
 
 app.listen(3000, () => console.log('App listening on port 3000!'))
